@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="http://entities"
+            targetNamespace="http://entities">
+
+    <xsd:element name="security">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="constraint" type="tns:constraint"
+                                 minOccurs="0" maxOccurs="1"/>
+                </xsd:choice>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="constraint">
+        <xsd:sequence>
+            <xsd:element name="url-path" type="xsd:string"/>
+            <xsd:element name="role" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

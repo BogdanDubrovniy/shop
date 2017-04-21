@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ent:security
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://entities input.xsd"
+        xmlns:ent="http://entities">
+    <constraint>
+        <url-path>/login</url-path>
+        <role>user</role>
+    </constraint>
+
+    <constraint>
+        <url-path>/bucket</url-path>
+        <role>unauthorized</role>
+    </constraint>
+    <constraint>
+        <url-path>/confirm</url-path>
+        <role>unauthorized</role>
+    </constraint>
+    <constraint>
+        <url-path>/makeOrder</url-path>
+        <role>unauthorized</role>
+    </constraint>
+</ent:security>
